@@ -45,7 +45,7 @@ function basic() {
   fill(val2);
   text(val, 310, 33);
   text(val2, 310, 71);
-  colorMode(RGB, 255);
+  strokeWeight(2)
   stroke(val2);
   line(0, 88, windowWidth, 88);
   noStroke();
@@ -53,20 +53,18 @@ function basic() {
   button2.style("color", val);
   button.style("background-color", val2);
   button.style("color", val);
+  spotifyButton = createButton('spotify');
+  githubButton = createButton('github');
+  spotifyButton.hide();
+  githubButton.hide();
 }
 
-function openlink(link) {
-  window.open(link);
+function spotifyLink() {
+  window.open("https://open.spotify.com/user/31bvpx26ymdjb3orkhtvmanuoqkq");
 }
 
-function basiclinkz() {
-  button3 = createButton('spotify')
-  button3.size(140, 68);
-  button3.position(10, 98);
-  button3.style("border", "none");
-  button3.style("font-size", "32px");
-  button3.style("color", val);
-  button3.style("background-color", val2);                    button3.mousePressed(openlink('https://open.spotify.com/user/31bvpx26ymdjb3orkhtvmanuoqkq'));
+function githubLink() {
+  window.open("https://github.com/cavegoblin");
 }
 
 function abtme() {
@@ -74,15 +72,31 @@ function abtme() {
   textWrap(WORD);
   text(
     "Hi! I'm Eli and I use he/him pronouns. I like to code and draw, I guess.", 8, 96, windowWidth);
-    button3.hide()
+  spotifyButton.hide()
+  githubButton.hide()
 }
 
 function linkz() {
   basic()
-  basiclinkz()
-  
+  spotifyButton.show();
+  spotifyButton.size(140, 68);
+  spotifyButton.position(10, 98);
+  spotifyButton.style("border", "none");
+  spotifyButton.style("font-size", "32px");
+  spotifyButton.style("color", val);
+  spotifyButton.style("background-color", val2);
+  spotifyButton.mousePressed(spotifyLink());
+  githubButton.show();
+  githubButton.size(132, 68);
+  githubButton.position(160, 98);
+  githubButton.style("border", "none");
+  githubButton.style("font-size", "32px");
+  githubButton.style("color", val);
+  githubButton.style("background-color", val2);
+  githubButton.mousePressed(githubLink());
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  basic()
 }
