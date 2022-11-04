@@ -55,8 +55,6 @@ function basic() {
   button.style("color", val);
   spotifyButton = createButton('spotify');
   githubButton = createButton('github');
-  spotifyButton.hide();
-  githubButton.hide();
 }
 
 function spotifyLink() {
