@@ -28,6 +28,8 @@ function setup() {
   button2.style("color", "#FFFFFF");
   button2.style("border", "none");
   button2.style("font-size", "32px");
+  spotifyButton = createButton('spotify');
+  githubButton = createButton('github');
 }
 
 function basic() {
@@ -53,8 +55,6 @@ function basic() {
   button2.style("color", val);
   button.style("background-color", val2);
   button.style("color", val);
-  spotifyButton = createButton('spotify');
-  githubButton = createButton('github');
 }
 
 function spotifyLink() {
@@ -62,7 +62,7 @@ function spotifyLink() {
 }
 
 function githubLink() {
-  window.open("https://github.com/cavegoblin");
+  window.open("https://github.com/sivvvz");
 }
 
 function abtme() {
@@ -76,14 +76,13 @@ function abtme() {
 
 function linkz() {
   basic()
-  spotifyButton.show();
+  spotifyButton.show()
   spotifyButton.size(140, 68);
   spotifyButton.position(10, 98);
   spotifyButton.style("border", "none");
   spotifyButton.style("font-size", "32px");
   spotifyButton.style("color", val);
   spotifyButton.style("background-color", val2);
-  spotifyButton.mousePressed(spotifyLink());
   githubButton.show();
   githubButton.size(132, 68);
   githubButton.position(160, 98);
@@ -91,7 +90,8 @@ function linkz() {
   githubButton.style("font-size", "32px");
   githubButton.style("color", val);
   githubButton.style("background-color", val2);
-  githubButton.mousePressed(githubLink());
+  spotifyButton.mousePressed(spotifyLink);
+  githubButton.mousePressed(githubLink);
 }
 
 function windowResized() {
