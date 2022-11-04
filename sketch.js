@@ -45,7 +45,7 @@ function basic() {
   fill(val2);
   text(val, 310, 33);
   text(val2, 310, 71);
-  strokeWeight(2)
+  strokeWeight(4)
   stroke(val2);
   line(0, 88, windowWidth, 88);
   noStroke();
