@@ -1,36 +1,8 @@
+let val2;
+let val;
 let r;
 let g;
 let b;
-let val;
-let val2;
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background("white");
-  fill("#000000");
-  textSize(32);
-  text("rgba(255,255,255,1)", 310, 33);
-  text("rgba(0,0,0,1)", 310, 71);
-  line(0, 88, windowWidth, 88);
-  button = createButton("abt me");
-  button.position(10, 10);
-  button.mousePressed(abtme);
-  button.size(160, 68);
-  button.style("background-color", "#000000");
-  button.style("color", "#FFFFFF");
-  button.style("border", "none");
-  button.style("font-size", "32px");
-  button2 = createButton("linkz");
-  button2.mousePressed(linkz);
-  button2.position(180, 10);
-  button2.size(120, 68);
-  button2.style("background-color", "#000000");
-  button2.style("color", "#FFFFFF");
-  button2.style("border", "none");
-  button2.style("font-size", "32px");
-  spotifyButton = createButton('spotify');
-  githubButton = createButton('github');
-}
 
 function basic() {
   r = random(255);
@@ -47,7 +19,7 @@ function basic() {
   fill(val2);
   text(val, 310, 33);
   text(val2, 310, 71);
-  strokeWeight(4)
+  strokeWeight(2)
   stroke(val2);
   line(0, 88, windowWidth, 88);
   noStroke();
@@ -55,6 +27,26 @@ function basic() {
   button2.style("color", val);
   button.style("background-color", val2);
   button.style("color", val);
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  background("white");
+  button = createButton("abt me");
+  button.position(10, 10);
+  button.mousePressed(abtme);
+  button.size(160, 68);
+  button.style("border", "none");
+  button.style("font-size", "32px");
+  button2 = createButton("linkz");
+  button2.mousePressed(linkz);
+  button2.position(180, 10);
+  button2.size(120, 68);
+  button2.style("border", "none");
+  button2.style("font-size", "32px");
+  basic()
+  spotifyButton = createButton('spotify');
+  githubButton = createButton('github');
 }
 
 function spotifyLink() {
