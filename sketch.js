@@ -35,6 +35,8 @@ function setup() {
   button2.style("font-size", "32px");
   spotifyButton = createButton('spotify');
   githubButton = createButton('github');
+  spotifyButton.hide();
+  githubButton.hide();
 }
 
 function basic() {
